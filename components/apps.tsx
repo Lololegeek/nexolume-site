@@ -24,7 +24,7 @@ export async function Apps() {
           >
             <div className="wrap section grid items-center gap-12 md:grid-cols-2 md:gap-16">
               <div className={i % 2 ? 'md:order-2' : ''}>
-                <h2 id={`${key}-titre`} className="head">
+                <h2 id={`${key}-titre`} className="giant">
                   {t(`${key}.name`)}
                 </h2>
                 <p className="lead mt-4 max-w-[28ch]">{t(`${key}.tagline`)}</p>
@@ -37,7 +37,9 @@ export async function Apps() {
                 </ul>
               </div>
               <Reveal>
-                <Mock />
+                <div className={i % 2 ? 'lg:rotate-[1.5deg]' : 'lg:-rotate-[1.5deg]'}>
+                  <Mock />
+                </div>
               </Reveal>
             </div>
           </section>

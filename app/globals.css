@@ -97,6 +97,16 @@
   --btn-edge: #b8873f;
   --btn-ink: var(--amber-ink);
 }
+.field--blue,
+.field--sage,
+.field--amber {
+  --btn: var(--ink);
+  --btn-ink: var(--bg);
+}
+.hero {
+  overflow-x: clip;
+  transition: background-color 400ms var(--ease);
+}
 .field--paper {
   --bg: var(--paper);
   --ink: var(--paper-ink);
@@ -127,6 +137,11 @@
   padding-block: clamp(4rem, 3rem + 5vw, 8rem);
 }
 
+.giant {
+  font-size: clamp(3.5rem, 1.5rem + 8vw, 9rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
 .display {
   font-size: var(--step-display);
 }
@@ -174,7 +189,7 @@
 .btn--ghost {
   background: transparent;
   color: inherit;
-  box-shadow: inset 0 0 0 2px currentColor;
+  border: 2px solid currentColor;
 }
 
 .nav-link {
@@ -190,6 +205,21 @@
 }
 }
 
+.tab {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: var(--step-small);
+  color: inherit;
+  border: 2px solid currentColor;
+  transition: background-color 150ms var(--ease), color 150ms var(--ease);
+}
+.tab[aria-selected='true'] {
+  background: var(--ink);
+  color: var(--bg);
+}
+
 /* Product fragments (data-ui) share one small system. */
 [data-ui] {
   font-family: var(--font-body);
@@ -201,7 +231,7 @@
 .mock {
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 12px 32px rgb(15 26 38 / 0.18);
+  box-shadow: 10px 10px 0 rgb(15 26 38 / 0.9);
 }
 .mock__bar {
   display: flex;

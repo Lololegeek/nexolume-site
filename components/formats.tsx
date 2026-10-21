@@ -22,9 +22,9 @@ export async function Formats() {
             {rows.map((row) => (
               <li
                 key={row.ext}
-                className="grid gap-1 border-t-2 border-current py-5 sm:grid-cols-[9rem_1fr] sm:gap-6"
+                className="grid gap-1 border-t-2 border-current py-5 sm:grid-cols-[16rem_1fr] sm:items-center sm:gap-6"
               >
-                <p className="text-2xl font-bold" style={{ fontFamily: 'var(--font-display)' }}>
+                <p className="text-[clamp(2.25rem,1.5rem+3vw,4rem)] leading-none font-bold" style={{ fontFamily: 'var(--font-display)' }}>
                   {row.ext}
                 </p>
                 <p>
