@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Nexolume : Writer, Sheets et Slides hors ligne",
+    "description": "Une suite bureautique Windows qui garde vos documents sur votre ordinateur. Writer, Sheets et Slides, sans compte ni connexion."
+  },
+  "nav": {
+    "skip": "Aller au contenu",
+    "switchTo": "Passer en anglais",
+    "switch": "English",
+    "version": "Alpha 0.1"
+  },
+  "hero": {
+    "title": "Nexolume",
+    "lead": "La suite bureautique Windows qui fonctionne hors ligne : Writer, Sheets et Slides, sans compte.",
+    "cta": "Télécharger l'alpha 0.1",
+    "folders": {
+      "spaces": "Espaces",
+      "preview": "Aperçu",
+      "open": "Formats",
+      "limits": "Limites",
+      "install": "Installer"
+    }
+  },
+  "features": {
+    "items": [
+      {
+        "sentence": "Vos fichiers restent sur ce PC.",
+        "consequence": "Aucun compte à créer, aucune connexion : 0 octet envoyé."
+      },
+      {
+        "sentence": "Ouvrez et enregistrez vos .docx et .odt.",
+        "consequence": "Les commentaires et les modifications suivies sont conservés dans les deux formats."
+      },
+      {
+        "sentence": "Sheets recalcule dès qu'une cellule change.",
+        "consequence": "SOMME, MOYENNE, MIN, MAX, NB et les opérations + - * / suivent les dépendances."
+      },
+      {
+        "sentence": "Slides lance le diaporama avec F5.",
+        "consequence": "Plein écran depuis le début, une seule étape d'annulation par glissement."
+      },
+      {
+        "sentence": "Writer corrige l'orthographe en français.",
+        "consequence": "Les corrections arrivent pendant la saisie, sans quitter la page."
+      }
+    ],
+    "toggle": "Afficher la conséquence"
+  },
+  "showcase": {
+    "title": "Writer et Sheets, côte à côte",
+    "writer": {
+      "name": "Writer",
+      "fact": "Texte, tableaux, images, notes de bas de page",
+      "doc": "Compte rendu du lundi",
+      "lines": [
+        "Les chiffres du trimestre sont dans Sheets. Ils se recalculent dès qu'une cellule change.",
+        "La présentation attend les dernières captures."
+      ],
+      "comment": "Relecture : à valider avant vendredi",
+      "saved": "Enregistré sur ce PC",
+      "formats": "Voir les formats",
+      "limits": "Voir les limites"
+    },
+    "sheets": {
+      "name": "Sheets",
+      "fact": "Formules, références, sélections au clavier",
+      "columns": [
+        "Poste",
+        "T1",
+        "T2"
+      ],
+      "rows": [
+        "Licences",
+        "Matériel",
+        "Déplacements",
+        "Formation"
+      ],
+      "total": "Total",
+      "install": "Installer",
+      "preview": "Télécharger"
+    }
+  },
+  "open": {
+    "title": "Déposez un fichier.",
+    "lead": "Le fichier reste dans votre navigateur : rien n'est envoyé.",
+    "drop": {
+      "idle": "Déposez un fichier ici",
+      "near": "Rapprochez-le",
+      "over": "Relâchez pour l'ajouter",
+      "browse": "ou cliquez pour parcourir",
+      "ready": "Reconnu",
+      "opensIn": "S'ouvre dans",
+      "replace": "Remplacer",
+      "remove": "Retirer",
+      "unsupported": "n'est pas un format que Nexolume ouvre."
+    },
+    "rows": [
+      {
+        "ext": ".docx",
+        "space": "Writer",
+        "text": "Word : texte, styles, tableaux, images, commentaires et suivi des modifications. Ouverture et enregistrement."
+      },
+      {
+        "ext": ".odt",
+        "space": "Writer",
+        "text": "OpenDocument : mêmes éléments, avec annotations et modifications suivies. Ouverture et enregistrement."
+      },
+      {
+        "ext": ".oswriter",
+        "space": "Writer",
+        "text": "Format natif de Nexolume, en JSON versionné. Ouverture et enregistrement."
+      },
+      {
+        "ext": ".ossheet",
+        "space": "Sheets",
+        "text": "Classeur natif, avec formules et formats. Ouverture et enregistrement."
+      },
+      {
+        "ext": ".osslides",
+        "space": "Slides",
+        "text": "Présentation native, avec diapositives et formes. Ouverture et enregistrement."
+      }
+    ],
+    "caveat": "Les objets avancés des fichiers Word sont conservés à l'enregistrement, mais leur affichage reste simplifié."
+  },
+  "limits": {
+    "title": "Pas encore dans l'alpha",
+    "items": [
+      "Windows x64 uniquement.",
+      "Pas de correction grammaticale contextuelle.",
+      "Pas de graphiques, de plugins ni de synchronisation.",
+      "Une seule feuille par classeur Sheets.",
+      "L'historique d'annulation n'est pas conservé après la fermeture.",
+      "L'affichage des objets avancés de Word reste simplifié."
+    ]
+  },
+  "install": {
+    "title": "Trois étapes, aucune installation",
+    "steps": [
+      {
+        "order": "D'abord",
+        "duration": "Environ une minute",
+        "clause": "Téléchargez l'archive ZIP de la version 0.1.0-alpha."
+      },
+      {
+        "order": "Ensuite",
+        "duration": "Quelques secondes",
+        "clause": "Extrayez tout le contenu du ZIP avant de lancer le programme."
+      },
+      {
+        "order": "Enfin",
+        "duration": "Immédiat",
+        "clause": "Ouvrez Nexolume.exe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Vos fichiers, chez vous.",
+    "text": "Windows x64. Le ZIP vient de la page des versions GitHub de ce projet.",
+    "button": "Télécharger l'alpha 0.1"
+  },
+  "footer": {
+    "places": [
+      "Page des versions",
+      "Code source",
+      "Journal des versions"
+    ],
+    "legal": "Nexolume est un projet en cours de développement. Version 0.1.0-alpha.",
+    "top": "Retour en haut"
+  }
+}

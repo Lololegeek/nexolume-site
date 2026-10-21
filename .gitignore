@@ -1,0 +1,19 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+next-env.d.ts
+
+# tests
+coverage/
+
+# misc
+.DS_Store
+*.log
+npm-debug.log*
+.env*.local
+.vercel
+*.tsbuildinfo
+.taste-skill/

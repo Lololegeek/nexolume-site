@@ -1,0 +1,171 @@
+{
+  "meta": {
+    "title": "Nexolume: offline Writer, Sheets and Slides",
+    "description": "A Windows office suite that keeps your documents on your computer. Writer, Sheets and Slides, with no account and no connection."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "switchTo": "Switch to French",
+    "switch": "Français",
+    "version": "Alpha 0.1"
+  },
+  "hero": {
+    "title": "Nexolume",
+    "lead": "The Windows office suite that works offline: Writer, Sheets and Slides, with no account.",
+    "cta": "Download alpha 0.1",
+    "folders": {
+      "spaces": "Spaces",
+      "preview": "Preview",
+      "open": "Formats",
+      "limits": "Limits",
+      "install": "Install"
+    }
+  },
+  "features": {
+    "items": [
+      {
+        "sentence": "Your files stay on this PC.",
+        "consequence": "No account to create, no connection: 0 bytes sent."
+      },
+      {
+        "sentence": "Open and save your .docx and .odt.",
+        "consequence": "Comments and tracked changes are kept in both formats."
+      },
+      {
+        "sentence": "Sheets recalculates when a cell changes.",
+        "consequence": "SUM, AVERAGE, MIN, MAX, COUNT and the + - * / operators follow cell dependencies."
+      },
+      {
+        "sentence": "Slides starts the show with F5.",
+        "consequence": "Full screen from the start, one undo step per drag."
+      },
+      {
+        "sentence": "Writer checks your French spelling.",
+        "consequence": "Corrections arrive while you type, without leaving the page."
+      }
+    ],
+    "toggle": "Show the consequence"
+  },
+  "showcase": {
+    "title": "Writer and Sheets, side by side",
+    "writer": {
+      "name": "Writer",
+      "fact": "Text, tables, images, footnotes",
+      "doc": "Monday meeting notes",
+      "lines": [
+        "The quarter's figures live in Sheets. They recalculate as soon as a cell changes.",
+        "The presentation is waiting for the last screenshots."
+      ],
+      "comment": "Review: confirm before Friday",
+      "saved": "Saved on this PC",
+      "formats": "See formats",
+      "limits": "See limits"
+    },
+    "sheets": {
+      "name": "Sheets",
+      "fact": "Formulas, references, keyboard selection",
+      "columns": [
+        "Item",
+        "Q1",
+        "Q2"
+      ],
+      "rows": [
+        "Licences",
+        "Hardware",
+        "Travel",
+        "Training"
+      ],
+      "total": "Total",
+      "install": "Install",
+      "preview": "Download"
+    }
+  },
+  "open": {
+    "title": "Drop a file.",
+    "lead": "The file stays in your browser: nothing is sent.",
+    "drop": {
+      "idle": "Drop a file here",
+      "near": "Bring it closer",
+      "over": "Let go to add it",
+      "browse": "or click to browse",
+      "ready": "Recognised",
+      "opensIn": "Opens in",
+      "replace": "Replace",
+      "remove": "Remove",
+      "unsupported": "is not a format Nexolume opens."
+    },
+    "rows": [
+      {
+        "ext": ".docx",
+        "space": "Writer",
+        "text": "Word: text, styles, tables, images, comments and tracked changes. Opens and saves."
+      },
+      {
+        "ext": ".odt",
+        "space": "Writer",
+        "text": "OpenDocument: the same elements, with annotations and tracked changes. Opens and saves."
+      },
+      {
+        "ext": ".oswriter",
+        "space": "Writer",
+        "text": "Nexolume's native format, in versioned JSON. Opens and saves."
+      },
+      {
+        "ext": ".ossheet",
+        "space": "Sheets",
+        "text": "Native workbook, with formulas and formats. Opens and saves."
+      },
+      {
+        "ext": ".osslides",
+        "space": "Slides",
+        "text": "Native presentation, with slides and shapes. Opens and saves."
+      }
+    ],
+    "caveat": "Advanced objects in Word files are kept when you save, but their display stays simplified."
+  },
+  "limits": {
+    "title": "Not yet in the alpha",
+    "items": [
+      "Windows x64 only.",
+      "No contextual grammar checking.",
+      "No charts, plugins or sync.",
+      "One sheet per Sheets workbook.",
+      "Undo history is not kept after closing.",
+      "Advanced Word objects display in a simplified way."
+    ]
+  },
+  "install": {
+    "title": "Three steps, no installer",
+    "steps": [
+      {
+        "order": "First",
+        "duration": "About a minute",
+        "clause": "Download the ZIP archive of version 0.1.0-alpha."
+      },
+      {
+        "order": "Then",
+        "duration": "A few seconds",
+        "clause": "Extract the whole ZIP before you start the program."
+      },
+      {
+        "order": "Last",
+        "duration": "Instant",
+        "clause": "Open Nexolume.exe."
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your files, at home.",
+    "text": "Windows x64. The ZIP comes from this project's GitHub releases page.",
+    "button": "Download alpha 0.1"
+  },
+  "footer": {
+    "places": [
+      "Releases page",
+      "Source code",
+      "Changelog"
+    ],
+    "legal": "Nexolume is a project under development. Version 0.1.0-alpha.",
+    "top": "Back to top"
+  }
+}
