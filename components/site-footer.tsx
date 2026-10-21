@@ -8,7 +8,7 @@ export async function SiteFooter() {
   const locale = await getLocale();
   const other = locale === 'fr' ? 'en' : 'fr';
   const places = t.raw('places') as string[];
-  const hrefs = [RELEASE.downloadUrl, RELEASE.repoUrl, `${RELEASE.repoUrl}/blob/main/CHANGELOG.md`];
+  const hrefs = [RELEASE.downloadUrl, RELEASE.sourceUrl, `${RELEASE.repoUrl}/blob/main/CHANGELOG.md`];
 
   return (
     <footer className="field field--paper">
