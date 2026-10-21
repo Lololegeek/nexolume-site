@@ -1,17 +1,32 @@
 import { getTranslations } from 'next-intl/server';
-import { HeroFolders } from '@/components/hero-folders';
-import { HeroTitle } from '@/components/hero-title';
+import { Reveal } from '@/components/reveal';
+import { WriterMock } from '@/components/mockups';
+import { RELEASE } from '@/lib/release';
 
 export async function Hero() {
   const t = await getTranslations('hero');
 
   return (
-    <section className="field field--night flex min-h-[calc(100svh-5rem)] flex-col pb-0">
-      <div className="pt-6 pb-16 md:pt-10">
-        <HeroTitle title={t('title')} />
-        <p className="lead mt-8 max-w-[34ch]">{t('lead')}</p>
+    <section aria-labelledby="hero-titre" className="field field--night">
+      <div className="wrap grid items-center gap-12 pt-10 pb-20 md:grid-cols-2 md:gap-16 md:pt-16 md:pb-28">
+        <div>
+          <h1 id="hero-titre" className="display max-w-[12ch]">
+            {t('title')}
+          </h1>
+          <p className="lead mt-6 max-w-[34ch] text-[var(--night-soft)]">{t('lead')}</p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a className="btn" href={RELEASE.downloadUrl}>
+              {t('cta')}
+            </a>
+            <a className="btn btn--ghost" href="#apps">
+              {t('more')}
+            </a>
+          </div>
+        </div>
+        <Reveal>
+          <WriterMock />
+        </Reveal>
       </div>
-      <HeroFolders />
     </section>
   );
 }

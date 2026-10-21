@@ -7,124 +7,98 @@
     "skip": "Aller au contenu",
     "switchTo": "Passer en anglais",
     "switch": "English",
-    "version": "Alpha 0.1"
+    "version": "Alpha 0.1",
+    "apps": "Applications",
+    "formats": "Formats",
+    "install": "Installer"
   },
   "hero": {
-    "title": "Nexolume",
-    "lead": "La suite bureautique Windows qui fonctionne hors ligne : Writer, Sheets et Slides, sans compte.",
+    "title": "Bureautique hors ligne.",
+    "lead": "Nexolume réunit Writer, Sheets et Slides dans une suite Windows. Pas de compte, et vos fichiers restent sur votre PC.",
     "cta": "Télécharger l'alpha 0.1",
-    "folders": {
-      "spaces": "Espaces",
-      "preview": "Aperçu",
-      "open": "Formats",
-      "limits": "Limites",
-      "install": "Installer"
-    }
+    "more": "Voir les applications"
   },
-  "features": {
-    "items": [
-      {
-        "sentence": "Vos fichiers restent sur ce PC.",
-        "consequence": "Aucun compte à créer, aucune connexion : 0 octet envoyé."
-      },
-      {
-        "sentence": "Ouvrez et enregistrez vos .docx et .odt.",
-        "consequence": "Les commentaires et les modifications suivies sont conservés dans les deux formats."
-      },
-      {
-        "sentence": "Sheets recalcule dès qu'une cellule change.",
-        "consequence": "SOMME, MOYENNE, MIN, MAX, NB et les opérations + - * / suivent les dépendances."
-      },
-      {
-        "sentence": "Slides lance le diaporama avec F5.",
-        "consequence": "Plein écran depuis le début, une seule étape d'annulation par glissement."
-      },
-      {
-        "sentence": "Writer corrige l'orthographe en français.",
-        "consequence": "Les corrections arrivent pendant la saisie, sans quitter la page."
-      }
-    ],
-    "toggle": "Afficher la conséquence"
-  },
-  "showcase": {
-    "title": "Writer et Sheets, côte à côte",
+  "apps": {
     "writer": {
       "name": "Writer",
-      "fact": "Texte, tableaux, images, notes de bas de page",
-      "doc": "Compte rendu du lundi",
-      "lines": [
-        "Les chiffres du trimestre sont dans Sheets. Ils se recalculent dès qu'une cellule change.",
-        "La présentation attend les dernières captures."
+      "tagline": "Écrivez, mettez en page, relisez.",
+      "points": [
+        "Texte, tableaux, images et notes de bas de page.",
+        "Correction de l'orthographe en français pendant la saisie.",
+        "Commentaires et modifications suivies conservés en .docx et .odt."
       ],
-      "comment": "Relecture : à valider avant vendredi",
-      "saved": "Enregistré sur ce PC",
-      "formats": "Voir les formats",
-      "limits": "Voir les limites"
+      "mock": {
+        "file": "Compte rendu.docx",
+        "heading": "Compte rendu du lundi",
+        "lines": [
+          "Les chiffres du trimestre sont dans Sheets.",
+          "La présentation attend les dernières captures."
+        ],
+        "comment": "À valider avant vendredi"
+      }
     },
     "sheets": {
       "name": "Sheets",
-      "fact": "Formules, références, sélections au clavier",
-      "columns": [
-        "Poste",
-        "T1",
-        "T2"
+      "tagline": "Calculez, comparez, suivez.",
+      "points": [
+        "SOMME, MOYENNE, MIN, MAX, NB et les opérations + - * /.",
+        "Les résultats se recalculent dès qu'une cellule change.",
+        "Sélections et déplacements au clavier."
       ],
-      "rows": [
-        "Licences",
-        "Matériel",
-        "Déplacements",
-        "Formation"
+      "mock": {
+        "file": "Budget.ossheet",
+        "columns": ["Poste", "T1", "T2"],
+        "rows": ["Licences", "Matériel", "Déplacements", "Formation"],
+        "total": "Total"
+      }
+    },
+    "slides": {
+      "name": "Slides",
+      "tagline": "Présentez, sans rien envoyer en ligne.",
+      "points": [
+        "Diaporama en plein écran avec F5.",
+        "Diapositives, formes et textes sur une même page.",
+        "Une seule étape d'annulation par glissement."
       ],
-      "total": "Total",
-      "install": "Installer",
-      "preview": "Télécharger"
+      "mock": {
+        "file": "Bilan.osslides",
+        "title": "Bilan du deuxième trimestre",
+        "bullets": ["Budget tenu", "Trois projets livrés"]
+      }
     }
   },
-  "open": {
-    "title": "Déposez un fichier.",
-    "lead": "Le fichier reste dans votre navigateur : rien n'est envoyé.",
-    "drop": {
-      "idle": "Déposez un fichier ici",
-      "near": "Rapprochez-le",
-      "over": "Relâchez pour l'ajouter",
-      "browse": "ou cliquez pour parcourir",
-      "ready": "Reconnu",
-      "opensIn": "S'ouvre dans",
-      "replace": "Remplacer",
-      "remove": "Retirer",
-      "unsupported": "n'est pas un format que Nexolume ouvre."
-    },
-    "rows": [
+  "why": {
+    "title": "Simple, et chez vous.",
+    "items": [
       {
-        "ext": ".docx",
-        "space": "Writer",
-        "text": "Word : texte, styles, tableaux, images, commentaires et suivi des modifications. Ouverture et enregistrement."
+        "title": "Hors ligne",
+        "text": "Aucun compte à créer, aucune connexion : vos documents ne sont envoyés nulle part."
       },
       {
-        "ext": ".odt",
-        "space": "Writer",
-        "text": "OpenDocument : mêmes éléments, avec annotations et modifications suivies. Ouverture et enregistrement."
+        "title": "Compatible",
+        "text": "Ouvrez et enregistrez des fichiers Word et OpenDocument, avec leurs commentaires."
       },
       {
-        "ext": ".oswriter",
-        "space": "Writer",
-        "text": "Format natif de Nexolume, en JSON versionné. Ouverture et enregistrement."
-      },
-      {
-        "ext": ".ossheet",
-        "space": "Sheets",
-        "text": "Classeur natif, avec formules et formats. Ouverture et enregistrement."
-      },
-      {
-        "ext": ".osslides",
-        "space": "Slides",
-        "text": "Présentation native, avec diapositives et formes. Ouverture et enregistrement."
+        "title": "Sans installation",
+        "text": "Une archive ZIP à extraire, puis Nexolume.exe. Rien d'autre sur votre système."
       }
+    ]
+  },
+  "formats": {
+    "title": "Les formats compatibles",
+    "lead": "Ouverture et enregistrement pour chacun d'eux.",
+    "items": [
+      { "ext": ".docx", "space": "Writer", "text": "Word : texte, styles, tableaux, images, commentaires et suivi des modifications." },
+      { "ext": ".odt", "space": "Writer", "text": "OpenDocument : mêmes éléments, avec annotations et modifications suivies." },
+      { "ext": ".oswriter", "space": "Writer", "text": "Format natif de Nexolume, en JSON versionné." },
+      { "ext": ".ossheet", "space": "Sheets", "text": "Classeur natif, avec formules et formats." },
+      { "ext": ".osslides", "space": "Slides", "text": "Présentation native, avec diapositives et formes." }
     ],
     "caveat": "Les objets avancés des fichiers Word sont conservés à l'enregistrement, mais leur affichage reste simplifié."
   },
   "limits": {
-    "title": "Pas encore dans l'alpha",
+    "title": "Ce qui manque encore",
+    "lead": "C'est une alpha. Voici ce qu'elle ne fait pas.",
     "items": [
       "Windows x64 uniquement.",
       "Pas de correction grammaticale contextuelle.",
@@ -135,22 +109,19 @@
     ]
   },
   "install": {
-    "title": "Trois étapes, aucune installation",
+    "title": "Prêt en trois étapes",
     "steps": [
       {
-        "order": "D'abord",
-        "duration": "Environ une minute",
-        "clause": "Téléchargez l'archive ZIP de la version 0.1.0-alpha."
+        "title": "Téléchargez",
+        "text": "Récupérez l'archive ZIP de la version 0.1.0-alpha."
       },
       {
-        "order": "Ensuite",
-        "duration": "Quelques secondes",
-        "clause": "Extrayez tout le contenu du ZIP avant de lancer le programme."
+        "title": "Extrayez",
+        "text": "Extrayez tout le contenu du ZIP avant de lancer le programme."
       },
       {
-        "order": "Enfin",
-        "duration": "Immédiat",
-        "clause": "Ouvrez Nexolume.exe."
+        "title": "Ouvrez",
+        "text": "Double-cliquez sur Nexolume.exe."
       }
     ]
   },

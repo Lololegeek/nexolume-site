@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Simpler, cleaner home page: plain hero with an app mockup, one section per app, formats, limits and three install steps.
+- Removed the folder stack, switch bands, drop zone and stage bar.
+
 ## 0.1.0-alpha — 2026-10-20
 
 First public version of the Nexolume site.
