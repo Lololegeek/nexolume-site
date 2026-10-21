@@ -2,8 +2,10 @@
 
 ## Unreleased
 
-- Simpler, cleaner home page: plain hero with an app mockup, one section per app, formats, limits and three install steps.
-- Removed the folder stack, switch bands, drop zone and stage bar.
+- New signature design: giant display type, flat colour fields, hard-shadow app mockups and a hero app switcher (Writer / Sheets / Slides) that recolours the first screen.
+- The application logo is now the site favicon and sits next to the name in the header.
+- The footer source link points to the application repository, [Lololegeek/nexolume](https://github.com/Lololegeek/nexolume).
+- Documentation translated to English.
 
 ## 0.1.0-alpha — 2026-10-20
 

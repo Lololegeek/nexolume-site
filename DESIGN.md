@@ -1,30 +1,37 @@
-# Design — Nexolume site
+# Nexolume site — design system
 
-Register: **brand**. Source of truth for tokens: `app/globals.css`.
+## Direction
 
-## Direction: colour chapters
-
-Each Nexolume space is a full-bleed field of colour. Sequence: night (hero) / paper (five switch bands) / blue + sage (showcase) / blush (drop zone) / sage (limits) / amber (install) / night (call to action) / paper (footer).
+A poster-like page: giant display type, flat colour fields and hard offset shadows on the app mockups. The signature is the hero's app switcher: three tabs (Writer, Sheets, Slides) recolour the whole first section and swap the mockup.
 
 ## Colour
 
-Six fields: night `#0f1a26`, paper `#eef1f4`, blue `#b4c9ea`, sage `#a8d0bd`, amber `#f0c27f`, blush `#efc9b6`. Each field carries its own dark ink (light ink on night). Action colour `#1f4e9b`. Amber and blush are never used for small text on other fields.
+| Token | Value | Use |
+|---|---|---|
+| night | `#0f1a26` | Ink, borders, hard shadows |
+| paper | `#eef1f4` | Neutral sections and footer |
+| blue | `#b4c9ea` | Writer field |
+| sage | `#a8d0bd` | Sheets field |
+| amber | `#f0c27f` | Slides field |
+| blush | `#efc9b6` | Secondary accent |
+
+Fields are full-width sections (`field--blue`, `field--sage`, `field--amber`, `field--paper`). Text on a field uses night ink, always at 4.5:1 or better.
 
 ## Typography
 
-League Spartan 700 for display (tracking -0.04em, leading 0.9); Figtree 400/600 for text. Body at least 16px, small at least 13px. Headlines hold in two lines or fewer.
+League Spartan for display (`.giant`: `clamp(3.5rem, 1.5rem + 8vw, 9rem)`, line height 0.95, tracking −0.04em) and for section heads; a plain sans for body text at 16 px or more. Headlines stay within two lines at every width.
 
 ## Components
 
-- Folder stack in the hero (tabs link to the sections).
-- Tactile button: dark base, face that sinks 4px on press.
-- Magnetic drop zone, adapted from the dqnamo Kitchen pattern (proximity spring, states idle / near / over).
-- Switch bands, index with preview, stages bar.
+- **Hero stage**: WAI-ARIA tabs with a bordered selected state (2 px currentColor border; the selected tab takes the ink background); the section background transitions over 400 ms.
+- **Mockups**: Writer, Sheets and Slides drawn in HTML with a `10px 10px 0` night shadow, slightly rotated on large screens (±1.5°).
+- **Sections**: apps, why Nexolume, formats (large extension text), limits of the alpha, install steps, final call to action.
+- **Header**: the app logo (also the favicon) before the name, language switch, download button.
 
 ## Motion
 
-Transform-only offsets and springs from `motion/react`; nothing hides content until it animates. Reduced motion removes offsets and the drop-zone pull.
+Reveal on scroll for headings and lists, the hero recolour, button press states. Everything respects `prefers-reduced-motion`.
 
-## Pictures
+## Accessibility
 
-No stock photography: the pictures are fragments of the product itself (`data-ui`): a document, a sheet, a slide, a file list.
+Skip link to the content, visible focus rings, minimum 44 px touch targets, tabs with arrow-key support, no horizontal scroll at 320 px.
