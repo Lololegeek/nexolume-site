@@ -1,3 +1,4 @@
+import { BASE_PATH } from '@/lib/site';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { RELEASE } from '@/lib/release';
@@ -16,6 +17,8 @@ export async function SiteHeader() {
           className="inline-flex min-h-11 items-center text-xl font-bold no-underline"
           style={{ fontFamily: 'var(--font-display)' }}
         >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={`${BASE_PATH}/icon.png`} alt="" width={32} height={32} className="mr-3 size-8" />
           Nexolume
           <span className="small ml-3 hidden font-semibold whitespace-nowrap text-[var(--night-soft)] sm:inline">
             {t('version')}

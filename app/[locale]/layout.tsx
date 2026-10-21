@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: LayoutProps): Promise<Metadat
       type: 'website',
       locale: locale === 'fr' ? 'fr_FR' : 'en_US',
     },
-    icons: { icon: `${BASE_PATH}/icon.svg` },
+    icons: { icon: [{ url: `${BASE_PATH}/icon.png`, type: 'image/png' }, { url: `${BASE_PATH}/favicon.ico` }] },
   };
 }
 
