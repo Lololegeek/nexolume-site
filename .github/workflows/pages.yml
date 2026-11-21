@@ -30,7 +30,11 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.0.x'
-      - run: dotnet workload install wasm-tools
+      # Manifests mode keeps the WebAssembly workload on the 10.0 SDK band (as built locally);
+      # the default workload-set mode pulled 11.0 packs whose runtime cannot load libSkiaSharp.
+      - run: |
+          dotnet workload config --update-mode manifests
+          dotnet workload install wasm-tools
       - run: rustup target add wasm32-unknown-unknown
       - run: cargo install wasm-bindgen-cli --version 0.2.130 --locked
       - run: ./scripts/build-web.ps1 -Configuration Release
