@@ -36,8 +36,9 @@ jobs:
       # 11.0.0 packs (Emscripten 6) cannot load the SkiaSharp that Avalonia.Browser needs (libSkiaSharp not found).
       - shell: pwsh
         run: |
-          # The stale .NET 11 Emscripten manifest is what makes the 10.0 install roll back; this runner is throwaway.
-          $stale = Join-Path $env:ProgramFiles 'dotnet\sdk-manifests\11.0.100\microsoft.net.workload.emscripten.net10'
+          # The runner's preinstalled .NET 11 workload manifests conflict with the 10.0 set this build pins, and the
+          # install rolls back. This build never uses .NET 11, and the runner is throwaway, so drop that folder.
+          $stale = Join-Path $env:ProgramFiles 'dotnet\sdk-manifests\11.0.100'
           if (Test-Path $stale) { Remove-Item $stale -Recurse -Force }
           dotnet workload clean --all
           dotnet workload install wasm-tools --version 10.0.404
