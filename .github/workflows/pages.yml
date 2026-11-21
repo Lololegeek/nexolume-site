@@ -34,7 +34,11 @@ jobs:
       # The runner image ships .NET 11 workload manifests that clash with the 10.0 ones, so clear them first.
       # Then pin the WebAssembly workload to the 10.0.404 set (manifests 10.0.115, as built locally): the
       # 11.0.0 packs (Emscripten 6) cannot load the SkiaSharp that Avalonia.Browser needs (libSkiaSharp not found).
-      - run: |
+      - shell: pwsh
+        run: |
+          # The stale .NET 11 Emscripten manifest is what makes the 10.0 install roll back; this runner is throwaway.
+          $stale = Join-Path $env:ProgramFiles 'dotnet\sdk-manifests\11.0.100\microsoft.net.workload.emscripten.net10'
+          if (Test-Path $stale) { Remove-Item $stale -Recurse -Force }
           dotnet workload clean --all
           dotnet workload install wasm-tools --version 10.0.404
       - run: rustup target add wasm32-unknown-unknown
