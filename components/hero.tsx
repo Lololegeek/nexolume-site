@@ -3,6 +3,7 @@ import { Reveal } from '@/components/reveal';
 import { HeroStage } from '@/components/hero-stage';
 import { SheetsMock, SlidesMock, WriterMock } from '@/components/mockups';
 import { RELEASE } from '@/lib/release';
+import { WEB_APP_URL } from '@/lib/site';
 
 export async function Hero() {
   const t = await getTranslations('hero');
@@ -26,10 +27,11 @@ export async function Hero() {
           <a className="btn" href={RELEASE.downloadUrl}>
             {t('cta')}
           </a>
-          <a className="btn btn--ghost" href="#apps">
-            {t('more')}
+          <a className="btn btn--ghost" href={WEB_APP_URL}>
+            {t('launch')}
           </a>
         </div>
+        <p className="small mt-4 max-w-[40ch] opacity-80">{t('launchNote')}</p>
       </Reveal>
     </HeroStage>
   );

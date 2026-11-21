@@ -10,14 +10,17 @@
     "version": "Alpha 0.1",
     "apps": "Apps",
     "formats": "Formats",
-    "install": "Install"
+    "install": "Install",
+    "web": "Web version"
   },
   "hero": {
     "title": "Offline office suite.",
     "lead": "Nexolume brings Writer, Sheets and Slides together in one Windows suite. No account, and your files stay on your PC.",
     "cta": "Download alpha 0.1",
     "pick": "Choose an app",
-    "more": "See the apps"
+    "more": "See the apps",
+    "launch": "Open in your browser",
+    "launchNote": "The web version needs no install or account, and works offline after the first visit."
   },
   "apps": {
     "writer": {
@@ -129,7 +132,8 @@
   "cta": {
     "title": "Your files, at home.",
     "text": "Windows x64. The ZIP comes from this project's GitHub releases page.",
-    "button": "Download alpha 0.1"
+    "button": "Download alpha 0.1",
+    "web": "Open the web version"
   },
   "footer": {
     "places": [

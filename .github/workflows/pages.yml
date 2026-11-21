@@ -1,8 +1,12 @@
 name: Pages
 
+# The site is rebuilt on every push here, and when the Nexolume repository asks for it
+# (repository_dispatch "nexolume-updated") or by hand, so the web app under /app/ stays current.
 on:
   push:
     branches: [main]
+  repository_dispatch:
+    types: [nexolume-updated]
   workflow_dispatch:
 
 permissions:
@@ -15,7 +19,30 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # The browser version of Nexolume (Avalonia + .NET WebAssembly + Rust engine), built from its own repository.
+  web-app:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: Lololegeek/nexolume
+          ref: main
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - run: dotnet workload install wasm-tools
+      - run: rustup target add wasm32-unknown-unknown
+      - run: cargo install wasm-bindgen-cli --version 0.2.130 --locked
+      - run: ./scripts/build-web.ps1 -Configuration Release
+        shell: pwsh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-app
+          path: artifacts/web
+          retention-days: 1
+
   build:
+    needs: web-app
     runs-on: ubuntu-latest
     env:
       BASE_PATH: /nexolume-site
@@ -30,6 +57,11 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-app
+          path: out/app
+      - run: touch out/.nojekyll
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -10,14 +10,17 @@
     "version": "Alpha 0.1",
     "apps": "Applications",
     "formats": "Formats",
-    "install": "Installer"
+    "install": "Installer",
+    "web": "Version web"
   },
   "hero": {
     "title": "Bureautique hors ligne.",
     "lead": "Nexolume réunit Writer, Sheets et Slides dans une suite Windows. Pas de compte, et vos fichiers restent sur votre PC.",
     "cta": "Télécharger l'alpha 0.1",
     "pick": "Choisir une application",
-    "more": "Voir les applications"
+    "more": "Voir les applications",
+    "launch": "Ouvrir dans le navigateur",
+    "launchNote": "La version web fonctionne sans installation ni compte, et hors ligne après la première visite."
   },
   "apps": {
     "writer": {
@@ -129,7 +132,8 @@
   "cta": {
     "title": "Vos fichiers, chez vous.",
     "text": "Windows x64. Le ZIP vient de la page des versions GitHub de ce projet.",
-    "button": "Télécharger l'alpha 0.1"
+    "button": "Télécharger l'alpha 0.1",
+    "web": "Ouvrir la version web"
   },
   "footer": {
     "places": [

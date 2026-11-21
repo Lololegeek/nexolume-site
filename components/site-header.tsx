@@ -1,4 +1,4 @@
-import { BASE_PATH } from '@/lib/site';
+import { BASE_PATH, WEB_APP_URL } from '@/lib/site';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { RELEASE } from '@/lib/release';
@@ -33,6 +33,9 @@ export async function SiteHeader() {
           </a>
           <a className="nav-link hidden md:inline-flex" href="#installer">
             {t('install')}
+          </a>
+          <a className="nav-link hidden lg:inline-flex" href={WEB_APP_URL}>
+            {t('web')}
           </a>
           <Link href="/" locale={other} aria-label={t('switchTo')} className="nav-link">
             {t('switch')}
